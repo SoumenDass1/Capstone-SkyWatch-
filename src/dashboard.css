@@ -1,0 +1,196 @@
+/* Base Styles */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+}
+
+.dashboard-wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+}
+
+.dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #7d78df; /* solid background */
+      padding: 1rem 2rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+}
+
+.logo {
+      font-size: 2rem;
+      font-weight: bold;
+}
+
+nav ul {
+      display: flex;
+      gap: 10rem;
+      list-style: none;
+      text-align: center;
+      background-color: #5c53ff;
+      padding: 15px;
+      border-radius: 50px;
+      grid-template-rows: 20px;
+}
+
+nav ul li a {
+      font-weight: 500;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 20px;
+      position: relative;
+      transition: color 0.3s ease;
+
+}
+
+nav ul li a:hover {
+      color: #ffffff;
+}
+
+nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background-color: #ffffff;
+      left: 0;
+      bottom: -4px;
+      border-radius: 20px;
+      transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+      width: 100%;
+}
+
+.user-controls {
+      text-align: right;
+}
+
+.logout-button {
+      background: #554ed6;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.5rem;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+}
+
+.logout-button:hover {
+      background: #554ed6;
+}
+
+.welcome-text {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #555;
+      text-transform: uppercase;
+}
+
+/* Main Dashboard Section */
+.dashboard-main {
+      display: flex;
+      gap: 2rem;
+      padding: 2rem;
+      flex-wrap: wrap;
+}
+
+.side-panel {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      flex: 1 1 200px;
+      max-width: 250px;
+      transition: transform 0.2s ease;
+}
+
+.side-panel:hover {
+      transform: translateY(-5px);
+}
+
+.side-panel h2 {
+      font-size: 1.4rem;
+      color: #333;
+      margin-bottom: 1rem;
+}
+
+.side-panel p {
+      font-size: 1rem;
+      color: #666;
+}
+
+.content-area {
+      flex: 3 1 600px;
+}
+
+.content-area h1 {
+      font-size: 2rem;
+      color: #444;
+      margin-bottom: 1.5rem;
+}
+
+/* Search Box Styling */
+.search-box {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+}
+
+.search-box input {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      width: 100%;
+      max-width: 400px;
+}
+
+.search-box button {
+      padding: 0.75rem 1.5rem;
+      background: #5c53ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+}
+
+.search-box button:hover {
+      background: #554ed6;
+}
+
+/* Flight Status Card */
+.flight-status-card {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 2rem;
+}
+
+.flight-status-card h2 {
+      font-size: 1.6rem;
+      color: #444;
+      margin-bottom: 1rem;
+}
+
+.flight-status-card p {
+      font-size: 1.1rem;
+      color: #555;
+}
