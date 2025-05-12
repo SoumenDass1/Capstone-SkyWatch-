@@ -7,7 +7,7 @@
 
 body {
       font-family: 'Roboto', sans-serif;
-      background-color: #f4f6f9;
+      background-image: linear-gradient(to right, #a4cdf6, #e0e7ee);
       color: #333;
 }
 
@@ -21,27 +21,30 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #7d78df; /* solid background */
-      padding: 1rem 2rem;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      background-color: teal; /* solid background */;
       position: sticky;
+      padding-left: 10px;
       top: 0;
       z-index: 10;
 }
 
 .logo {
-      font-size: 2rem;
-      font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
+ /* accent color */
+
+.logo span {
+  color: #20c997; /* accent color */
+}
+
 
 nav ul {
       display: flex;
-      gap: 10rem;
+      gap: 5rem;
       list-style: none;
       text-align: center;
-      background-color: #5c53ff;
       padding: 15px;
-      border-radius: 50px;
       grid-template-rows: 20px;
 }
 
@@ -55,10 +58,6 @@ nav ul li a {
 
 }
 
-nav ul li a:hover {
-      color: #ffffff;
-}
-
 nav ul li a::after {
       content: '';
       position: absolute;
@@ -68,7 +67,7 @@ nav ul li a::after {
       left: 0;
       bottom: -4px;
       border-radius: 20px;
-      transition: width 0.3s ease-in-out;
+      transition: width 1s ease-in-out;
 }
 
 nav ul li a:hover::after {
@@ -80,7 +79,7 @@ nav ul li a:hover::after {
 }
 
 .logout-button {
-      background: #554ed6;
+      background: #5c53ff;
       color: white;
       border: none;
       padding: 0.6rem 1.5rem;

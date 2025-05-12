@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../login.css';
 
-function Login({ onLogin, onSignup }) {
+function Login({ onLogin }) {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -13,12 +15,13 @@ function Login({ onLogin, onSignup }) {
       return;
     }
     onLogin(fullName);
+    navigate('/dashboard');
   };
 
   return (
     <div className="login-page">
       <div className="login-card fade-in">
-        <h2 className="login-title">Welcome Back To<br/>SkyWatch</h2>
+        <h2 className="login-title">Welcome Back To<br />SkyWatch</h2>
         <form onSubmit={handleLogin}>
           <div className="form-group">
             <label>Full Name</label>
@@ -50,16 +53,14 @@ function Login({ onLogin, onSignup }) {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-
           <div className="form-links">
             <a href="#" className="forgot-link">Forgot password?</a>
           </div>
-
           <button type="submit" className="login-button">Login</button>
         </form>
 
         <div className="signup-link">
-          Don’t have an account? <a href="#" onClick={onSignup}>Sign up</a>
+          Don’t have an account? <a href="#" onClick={() => navigate('/signup')}>Sign up</a>
         </div>
       </div>
     </div>

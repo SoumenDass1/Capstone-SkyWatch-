@@ -1,20 +1,19 @@
 :root {
-      --primary: #6c63ff;
-      --background: #f5f7fa;
-      --text: #212529;
-      --card-bg: rgba(255, 255, 255, 0.8);
-      --border-radius: 16px;
+      --primary: teal;
+      --secondary: #f0f0f0;
+      --text: #3a3d3f;
+      --card-bg: rgba(255, 255, 255, 0.057);
       --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       --input-border: #ccc;
 }
 
 /* Full page layout */
 .login-page {
+      background: url('https://specials-images.forbesimg.com/imageserve/66ba827c8ff2be58a5e1ea62/960x0.jpg') center/cover no-repeat;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: linear-gradient(135deg, #cbdbf5, #f5f7fa);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       padding: 1rem;
 }
@@ -24,7 +23,8 @@
       background: var(--card-bg);
       backdrop-filter: blur(15px);
       padding: 2.5rem;
-      border-radius: var(--border-radius);
+      border: 3px solid rgba(255, 255, 255, 0.421);
+      border-radius: 30px;
       box-shadow: var(--shadow);
       width: 100%;
       max-width: 400px;
@@ -109,6 +109,7 @@
       }
 }
 
+/* Links */
 .form-links {
       text-align: right;
       margin-top: -1rem;
@@ -117,7 +118,7 @@
 
 .forgot-link {
       font-size: 0.875rem;
-      color: var(--primary-color);
+      color: var(--secondary);
       text-decoration: none;
 }
 
@@ -132,7 +133,7 @@
 }
 
 .signup-link a {
-      color: var(--primary-color);
+      color: var(--secondary);
       text-decoration: none;
       font-weight: 500;
 }

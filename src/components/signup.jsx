@@ -1,11 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../login.css';
 
-function Signup({ onBack }) {
+function Signup() {
+  const navigate = useNavigate();
+
   const handleSignup = (e) => {
     e.preventDefault();
-    alert('Account created! You can now log in.');
-    onBack();
+    navigate('/login');
   };
 
   return (
@@ -25,12 +27,11 @@ function Signup({ onBack }) {
             <label>Password</label>
             <input type="password" className="form-input" placeholder="Create a password" />
           </div>
-
           <button type="submit" className="login-button">Sign Up</button>
         </form>
 
         <div className="signup-link">
-          Already have an account? <a href="#" onClick={onBack}>Log in</a>
+          Already have an account? <a href="#" onClick={() => navigate('/login')}>Log in</a>
         </div>
       </div>
     </div>
